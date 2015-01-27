@@ -1,3 +1,5 @@
+{{!--templates/application.hbs--}}
+<h1>{{message-queue}}</h1>
 <section class="columns">
   <div class="column column-three">
     <h2>Your Note</h2>
@@ -16,24 +18,23 @@
 
   <div class="column column-three">
     <h2>Preview</h2>
-        <div class="fixed-preview">
-          {{input value=noteCopy2 readonly=true}}
-        </div>
-      <div class="fixed-preview">
-        {{input value=noteCopy readonly=true}}
-      </div>
-
+    <div class="fixed-preview">
+      {{input value=noteCopy2 readonly=true}}
+    </div>
+    <div class="fixed-preview">
+      {{input value=noteCopy readonly=true}}
+    </div>
   </div>
 </section>
-  {{#each note in model}}
-<section>
-
-  <div class="note-format">
-    <h3><strong>{{note.title}}</strong></h3>
-    <p>{{note.body}}</p>
-  </div>
-</section>
-  {{/each}}
+{{#each note in model}}
+  <section>
+    <div class="note-format">
+      <h3><strong>{{note.title}}</strong></h3>
+      <p>{{note.body}}</p>
+      <button {{action 'deleteNote' note.id}}>Delete Note</button>
+    </div>
+  </section>
+{{/each}}
 
 
 {{outlet}}
