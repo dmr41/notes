@@ -10,25 +10,25 @@ export default Ember.ArrayController.extend({
         this.set('noteCopy', '');
         this.set('noteCopy2', '');
         note.save();
-        this.flashMessage('', 'Noted!', 2000);
+        this.flashMessage('', 'Noted!', 1500);
       }
       else if (body) {
-        this.flashMessage('', 'You forgot the title.');
+        this.flashMessage('', 'You forgot the title.', 1500);
       }
       else if (title) {
-        this.flashMessage('', "You left your note blank. What's up with that?");
+        this.flashMessage('', "You left your note blank. What's up with that?", 1500);
       }
       else {
-        this.flashMessage('', 'Fill in both fields.');
+        this.flashMessage('', 'Fill in both fields.', 1500);
       }
     },
 
     deleteNote: function (note_id) {
-      var note = this.store.find('note', note_id).then(function(note) {
-        note.deleteRecord();
-        note.save();
+      var lemon = this.store.find('note', note_id).then(function(lemon) {
+        lemon.deleteRecord();
+        lemon.save();
       });
-      this.flashMessage('', 'Deleted');
+      this.flashMessage('', 'Deleted', 1500);
     },
   }
 });

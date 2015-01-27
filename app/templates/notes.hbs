@@ -5,13 +5,13 @@
     <h2>Your Note</h2>
     <div class="input-sizer">
       <div>
-        {{textarea placeholder="Add a title!" value=noteCopy2 row=25 cols=40}}
+        {{textarea placeholder="Add a title!" value=noteCopy2 row=20 cols=40}}
       </div>
       <div>
-        {{textarea placeholder="Add a note!" value=noteCopy row=25 cols=40}}
+        {{textarea placeholder="Add a note!" value=noteCopy row=40 cols=40}}
       </div>
       <div class="save-format">
-        <button {{action 'newNote'}}>Save Note</button><div class="alertables">{{message-queue classPrefix='flash'}}</div>
+        <button {{action 'newNote'}}>Save Note</button><div class="alertables">{{message-queue}}</div>
       </div>
     </div>
   </div>
