@@ -1,5 +1,5 @@
-{{!--templates/application.hbs--}}
-<h1>{{message-queue}}</h1>
+
+
 <section class="columns">
   <div class="column column-three">
     <h2>Your Note</h2>
@@ -11,7 +11,7 @@
         {{textarea placeholder="Add a note!" value=noteCopy row=25 cols=40}}
       </div>
       <div class="save-format">
-        <button {{action 'newNote'}}>Save Note</button>
+        <button {{action 'newNote'}}>Save Note</button><div class="alertables">{{message-queue classPrefix='flash'}}</div>
       </div>
     </div>
   </div>
@@ -25,6 +25,7 @@
       {{input value=noteCopy readonly=true}}
     </div>
   </div>
+
 </section>
 {{#each note in model}}
   <section>

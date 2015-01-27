@@ -91,3 +91,9 @@ button {
   margin: 0.25em;
   background: #847996;
 }
+
+div.alertables {
+  color: #E9F1F7;
+  display: inline-block;
+  position: absolute;
+}
