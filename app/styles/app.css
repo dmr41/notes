@@ -81,7 +81,8 @@ div.note-format {
   overflow: scroll;
 }
 button {
-  margin-top: .25em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .fixed-preview input{
@@ -93,7 +94,7 @@ button {
 }
 
 div.alertables {
-  color: #E9F1F7;
+  color: #EE92C2;
   display: inline-block;
   position: absolute;
 }
