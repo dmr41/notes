@@ -11,7 +11,8 @@
         {{textarea placeholder="Add a note!" value=noteCopy row=40 cols=40}}
       </div>
       <div class="save-format">
-        <button {{action 'newNote'}}>Save Note</button><div class="alertables">{{message-queue}}</div>
+        <button {{action 'newNote' note.id}}>Save Note</button>
+        <div class="alertables">{{message-queue}}</div>
       </div>
     </div>
   </div>

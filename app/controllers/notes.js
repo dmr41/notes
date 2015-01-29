@@ -1,3 +1,4 @@
+
 import Ember from "ember";
 
 export default Ember.ArrayController.extend({
@@ -24,11 +25,11 @@ export default Ember.ArrayController.extend({
     },
 
     deleteNote: function (note_id) {
-      var lemon = this.store.find('note', note_id).then(function(lemon) {
+      this.store.find('note', note_id).then(function(lemon) {
         lemon.deleteRecord();
         lemon.save();
-      });
-      this.flashMessage('', 'Deleted', 1500);
+        this.flashMessage('', 'Deleted', 1500);
+      }.bind(this));
     },
   }
 });
