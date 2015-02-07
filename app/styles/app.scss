@@ -1,5 +1,5 @@
-@import '_normalize.css';
-@import '_column_core.css';
+@import 'normalize';
+@import 'column_core';
 
 html, body, footer {
   background: #847996;
@@ -97,4 +97,13 @@ div.alertables {
   color: #EE92C2;
   display: inline-block;
   position: absolute;
+}
+
+article{
+  background: #E9F1F7;
+  border-radius: 4px;
+  text-align: center;
+  width: 40%;
+  font-family: Times;
+  margin: 0 auto;
 }
